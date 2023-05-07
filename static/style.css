@@ -1,0 +1,397 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins' , sans-serif;
+    box-sizing: border-box;
+
+}
+html{
+    scroll-behavior: smooth;
+}
+    
+body{
+
+    background-color: hsl(236, 52%, 13%);
+    color: #fff;
+}
+
+#header{
+
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/ion-fet-QRawWgV6gmo-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+#header1{
+
+    width: 100%;
+    height: 90px;
+    background-color:black; 
+    background-size: cover;
+    background-position: center;
+
+}
+.contanier{
+    padding: 10px 10%;
+}
+.contanier_rep{
+    padding: 10px 4%;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between ;
+    flex-wrap: wrap;
+
+}
+.logo{
+    width: 140px;
+
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+
+}
+nav ul li a{
+
+    color: lavender;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text{
+    margin-top: 10%;
+    font-size: 30px;
+
+}
+
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+
+}
+.header-text h1 span{
+    color: #ff004f;
+}
+
+/*------------------about-----------------*/
+
+#about{
+    padding: 80px 0;
+    color: aqua;
+    background-image: url(images/about.jpg);
+
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+.about-col1{
+    flex-basis: 35%;
+
+}
+about-col1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.about-col2{
+    flex-basis: 50%;
+
+}
+.subtitle{
+    font-size: 60px;
+    font-weight: 600;
+    color: #11ff00;
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+
+}
+.tab-links{
+    color: #c3ff00;
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff0000;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+.tab-contents ul li{
+    color: aqua;
+    font-size: 15px;
+}
+.tab-contents ul li span{
+
+    color: #ff004f;
+    font-size: 20px;
+
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+/*------------------services-----------------*/
+#services{
+    padding: 30px 0;
+    background-image: url(images/services.jpg);
+
+}
+.services-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+    
+
+}
+.services-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background-color 0.5s , transform 0.5s;
+}
+.services-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+
+}
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+
+}
+
+.services-list :hover{
+    background-color: red;
+    transform: translateY(-10px);
+
+}
+/*------------------portfolio-----------------*/
+#portfolio{
+    padding: 50px 0;
+
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.work{
+    border-radius: 1Opx;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+
+}
+.layer{
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+
+}
+.layer a{
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.work:hover img{
+     transform: scale(1.1);
+
+}
+.work:hover .layer{
+    height: 100%;
+
+}
+/*------------------contact-----------------*/
+.contact-left{
+    flex-basis: 35%;
+    
+}
+.contact-left1{
+    flex-basis: 50%;
+    
+}
+.contact-right{
+    flex-basis: 60%;
+
+}
+.contact-right1{
+    flex-basis: 40%;
+
+}
+.contact-left p{
+    margin-top: 30px;
+
+}
+.contact-left p i{
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+
+}
+.contact-right form{
+    width: 100%;
+
+}
+form input ,  form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+
+}
+form .btn2{
+    padding: 14px 16px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+    background: grey;
+    color: yellow;
+
+}
+.madeby{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background:  hsl(236, 52%, 13%);
+    font-weight: 300;
+    margin-top: 20px;
+
+}
+#msg{
+    color: #61b752;
+    margin-top: 4px;
+    display: block;
+
+}
+
+/*------------------upload image-----------------*/
+#uploadimage{
+    background-color: hsl(234, 92%, 14%);
+    margin-top: 30px;
+}
+
+.btn22{
+    padding: 14px 16px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+    background: green;
+    color: yellow;
+    width: 150px;
+    margin-right: 60px;
+
+}
+.inp{
+    width: 280px;
+    margin-right: 150px;
+}
+.subtitle1{
+    font-size: 50px;
+    font-weight: 600;
+    color: #11ff00;
+}
+#report{
+    margin-top: 20px;
+}
+.repo{
+    margin-left: 40%;
+    color: #ff0000;
+    margin-bottom: 20px;
+}
+.Givenimage{
+    height: 512px;
+    width: 512px;
+}
+.report_table table{
+    margin-top: 30px;
+    font-size: 17px;
+    color: #11ff00;
+    /* border: 2px solid black; */
+}
+.report_table td{
+    padding: 8px 0;
+    text-align: center;
+    width: 300px;
+}
+.report_table th {
+	color: red;
+	font-size: 22px;
+}
